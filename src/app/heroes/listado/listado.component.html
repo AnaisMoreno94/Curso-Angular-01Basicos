@@ -1,0 +1,31 @@
+<h1>Listado de Heroes</h1>
+<div>
+    <button (click)="deleteHero()" *ngIf="heroes.length >0">Borrar Heroe</button>
+    <ul>
+        <li *ngFor="let hero of heroes; let i=index"> {{i + 1}}- {{hero}}</li>
+    </ul>
+
+
+</div> <br>
+
+
+<!-- El #noBorrado se conoce como referencia local para el ng-template... una vez generado el ng template se puede aplicar en la evaluacion del if y directamente ya angular sabe que tiene que inyectar ese codigo en caso del que el ngIf retorne como false -->
+
+<ng-template #noBorrado>
+    <h3>No se han borrado Heroes aun</h3>
+</ng-template>
+
+
+
+<div *ngIf="deletedHeros.length > 0; else noBorrado">
+
+    <button (click)="addHero()">Agregar Heroe</button>
+    <h3>Heroes Borrados</h3>
+    <ul>
+        <li *ngFor="let hero of deletedHeros">
+            {{hero}}
+        </li>
+    </ul>
+
+
+</div>
