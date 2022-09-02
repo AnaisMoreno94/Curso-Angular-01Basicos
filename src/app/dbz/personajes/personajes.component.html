@@ -1,0 +1,7 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <li *ngFor="let personaje of personajes"> Nombre: {{personaje.nombre}} Poder: {{personaje.poder | number}}
+    </li>
+    <!--  el |number es un pipe que sirve para transformar visualmente la informacion, se pueden crear pipes personalizados-->
+</ul>

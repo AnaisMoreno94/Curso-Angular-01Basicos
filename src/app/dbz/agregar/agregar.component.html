@@ -1,0 +1,14 @@
+<h3>Agregar</h3>
+<hr>
+<form (ngSubmit)="agregar()">
+    <!--en la forma tradicional de trabajar javaScript seria <form submit=funcion($event), donde la funcion estaria declarada en el componente pero Angular ofrece el modulo de los formularios para facilitar esto con el ngSubmit -->
+
+    <label for="name">Nombre Personaje</label>
+    <input type="text" placeholder="Nombre Personaje" name="nombre" id="name" [(ngModel)]="nuevo.nombre">
+    
+    <!--  [value]="personaje.nombre" (input)="cambiarNombre( $event )" con estos elementos sepodria realizar el data binding con el evento para los cambios del formulario tambien-->
+    <label for="power">Nivel de Poder</label>
+    <input type="number" placeholder="Power Lvl" [value]="nuevo.poder" id="power" name="poder" [(ngModel)]="nuevo.poder">
+
+    <button type="submit">Agregar</button>
+</form>

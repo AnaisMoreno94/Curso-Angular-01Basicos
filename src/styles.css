@@ -39,3 +39,22 @@ button:focus {
 .p-1 {
     padding: 1px;
 }
+
+.row {
+    display: flex;
+    column-gap: 10px;
+}
+
+.col {
+    flex-grow: 1;
+}
+
+input {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+}
+
+li {
+    margin-bottom: 5px;
+}

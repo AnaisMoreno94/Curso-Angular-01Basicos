@@ -9,14 +9,6 @@
 </div> <br>
 
 
-<!-- El #noBorrado se conoce como referencia local para el ng-template... una vez generado el ng template se puede aplicar en la evaluacion del if y directamente ya angular sabe que tiene que inyectar ese codigo en caso del que el ngIf retorne como false -->
-
-<ng-template #noBorrado>
-    <h3>No se han borrado Heroes aun</h3>
-</ng-template>
-
-
-
 <div *ngIf="deletedHeros.length > 0; else noBorrado">
 
     <button (click)="addHero()">Agregar Heroe</button>
@@ -29,3 +21,11 @@
 
 
 </div>
+
+
+<!-- El #noBorrado se conoce como referencia local para el ng-template... una vez generado el ng template se puede aplicar en la evaluacion del if y directamente ya angular sabe que tiene que inyectar ese codigo en caso del que el ngIf retorne como false -->
+
+
+<ng-template #noBorrado>
+    <h3>No se han borrado Heroes aun</h3>
+</ng-template>
